@@ -12,42 +12,98 @@ html, body {
 }
 
 .container {
-  width: 80%;
-  max-width: 600px;
-  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  border: 2px solid red;
 }
 
-button.accordion {
+.container .secs-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 900px;
+  height: 500px;
+  background-color: #fff;
+  border-radius: 25px;
+  overflow: hidden;
+  border: 2px solid blue;
+}
+
+.images-wrapper {
+  background: url(/images/bg-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  top: 0%;
+  left: -10%;
+  position: relative;
+  border: 2px solid green;
+}
+
+.images-wrapper .desk-woman {
+  position: relative;
+}
+
+.images-wrapper .desk-box {
+  position: absolute;
+  top: 50%;
+  left: -3%;
+}
+
+.accordion-wrapper {
+  margin-right: 80px;
+  border: 2px solid magenta;
+}
+
+.accordion-wrapper h1 {
+  font-size: 32px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.accordion-wrapper button.accordion {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 12px;
   width: 100%;
-  background-color: whitesmoke;
+  background-color: transparent;
   border: none;
   outline: none;
   text-align: left;
-  padding: 15px 20px;
-  font-size: 18px;
-  color: #333;
+  padding: 15px 15px 15px 0;
+  color: #4a4b5e;
   cursor: pointer;
   transition: background-color 0.2s linear;
 }
 
-button.accordion:after {
-  content: url(./images/icon-arrow-down.svg);
+.accordion-wrapper button.accordion:after {
+  content: url(/images/icon-arrow-down.svg);
+  float: right;
 }
 
-button.accordion.is-open:after {
-  content: "\f056";
+.accordion-wrapper button.accordion.is-open:after {
+  content: url(/images/icon-arrow-down.svg);
+  transition: transform 0.2s linear;
+  transform: rotate(180deg);
 }
 
-button.accordion:hover, button.accordion.is-open {
-  background-color: #ddd;
+.accordion-wrapper button.accordion:hover, .accordion-wrapper button.accordion.is-open {
+  color: #1d1e35;
+  font-weight: 700;
 }
 
-.accordion-content {
-  background-color: white;
-  border-left: 1px solid whitesmoke;
-  border-right: 1px solid whitesmoke;
-  padding: 0 20px;
+.accordion-wrapper .accordion-content {
+  background-color: transparent;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-in-out;
+}
+
+.accordion-wrapper .accordion-content p {
+  color: #787887;
+  padding-bottom: 15px;
+}
+
+.accordion-wrapper hr {
+  border: 1px solid #e7e7e9;
 }
