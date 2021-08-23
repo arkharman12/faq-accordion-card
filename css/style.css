@@ -16,6 +16,7 @@ html, body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  position: relative;
   border: 2px solid red;
 }
 
@@ -28,32 +29,28 @@ html, body {
   background-color: #fff;
   border-radius: 25px;
   overflow: hidden;
-  border: 2px solid blue;
 }
 
 .images-wrapper {
-  background: url(/images/bg-pattern-desktop.svg);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  top: 0%;
-  left: -10%;
-  position: relative;
-  border: 2px solid green;
-}
-
-.images-wrapper .desk-woman {
-  position: relative;
+  height: 100%;
+  width: 100%;
+  background: url(/images/illustration-woman-online-desktop.svg), url(/images/bg-pattern-desktop.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100%, 180%;
+  background-position: -80px 50%, -460px 70%;
 }
 
 .images-wrapper .desk-box {
   position: absolute;
-  top: 50%;
+  top: 45.5%;
   left: -3%;
 }
 
 .accordion-wrapper {
   margin-right: 80px;
+  margin-top: 150px;
   border: 2px solid magenta;
+  height: 100%;
 }
 
 .accordion-wrapper h1 {
@@ -79,6 +76,7 @@ html, body {
 .accordion-wrapper button.accordion:after {
   content: url(/images/icon-arrow-down.svg);
   float: right;
+  font-weight: 400;
 }
 
 .accordion-wrapper button.accordion.is-open:after {
