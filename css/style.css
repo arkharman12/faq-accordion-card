@@ -32,7 +32,7 @@ html, body {
   position: relative;
   height: 100%;
   width: 100%;
-  background-image: url("/images/illustration-woman-online-desktop.svg"), url("/images/bg-pattern-desktop.svg");
+  background-image: url("./images/illustration-woman-online-desktop.svg"), url("./images/bg-pattern-desktop.svg");
   background-repeat: no-repeat, no-repeat;
   background-size: 100%, 180%;
   background-position: -80px 50%, -460px 70%;
@@ -71,13 +71,13 @@ html, body {
 }
 
 .accordion-wrapper button.accordion:after {
-  content: url("/images/icon-arrow-down.svg");
+  content: url("./images/icon-arrow-down.svg");
   float: right;
   font-weight: 400;
 }
 
 .accordion-wrapper button.accordion.active:after {
-  content: url("/images/icon-arrow-down.svg");
+  content: url("./images/icon-arrow-down.svg");
   transition: transform 0.2s linear;
   transform: rotate(180deg);
 }
@@ -121,7 +121,7 @@ html, body {
     position: absolute;
     height: 250px;
     width: 100%;
-    background-image: url("/images/illustration-woman-online-desktop.svg"), url("/images/bg-pattern-desktop.svg");
+    background-image: url("./images/illustration-woman-online-desktop.svg"), url("./images/bg-pattern-desktop.svg");
     background-repeat: no-repeat, no-repeat;
     background-size: 70%, 70%;
     background-position: 5% 0%, 5% -600%;
